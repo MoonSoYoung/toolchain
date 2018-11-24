@@ -1,6 +1,8 @@
-# Tool-chain for Software Visualization
-
-One Paragraph of project description goes here
+# Tool-chain for Software Visualizati
+아래과 같은 도구로 Tool-chain을 구성한다.
+* Source Navigator
+* SQLite
+* Graphviz (Dot Script)
 
 ## Getting Started
 
