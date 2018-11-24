@@ -1,5 +1,6 @@
 # Tool-chain for Software Visualizati
 아래과 같은 도구로 Tool-chain을 구성한다.
+![toolchain](./toolchain.png)
 * Source Navigator
 * SQLite
 * Graphviz (Dot Script)
