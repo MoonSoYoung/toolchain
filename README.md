@@ -60,7 +60,12 @@ SWV에서 전체 필요한 프로그램을 설치했는데, 혹시라도 누락�
 
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+* toolchain 소스코드를 github에서 저장소를 복제한다.
+복제 위치: /usr/local/SWV/toolchain
+
+```bash
+# git clone https://github.com/moasoftware/toolchain.git
+```
 
 ## Running the tests
 
