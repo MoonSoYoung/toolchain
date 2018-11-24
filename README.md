@@ -27,18 +27,37 @@ Give examples
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+SWV에서 전체 필요한 프로그램을 설치했는데, 혹시라도 누락된 경우가 있다면 아래와 같이 설치를 하면 된다. 리눅스에 SQLite는 기본으로 설치되어 있으므로 따로 설치방법을 설명하지 않고, Source Navigator, Graphviz만 설명한다. SWV에서 디렉토리 구성을 모두 했으므로 아래와 같이 따라 한다.
+만약 /usr/local/SWV/dev 디렉토리가 없다면, 디렉토리를 생성하고 작업해야 한다.
 
-Say what the step will be
+* Source Nagigator
+
+```bash
+# cd /usr/local/SWV/dev
+# mkdir SNavi
+# cd SNavi
+# wget https://sourceforge.net/projects/sourcenav/files/NG4.5/sourcenavigator-NG4.5.tar.bz2
+# tar jxf sourcenavigator-NG4.5.tar.bz2
+# cd sourcenavigator-NG4.5
+# ./configure --prefix=/usr/local/SWV/dev/SNavi
+# make
+# make install
 
 ```
-Give the example
-```
 
-And repeat
+* Graphviz
 
-```
-until finished
+```bash
+# cd /usr/local/SWV/dev
+# mkdir graphviz
+# cd graphviz
+# wget -c http://graphviz.gitlab.io/pub/graphviz/stable/SOURCES/graphviz.tar.gz
+# tar -xzvf graphviz.tar.gz
+# cd graphviz-2.40.1
+# ./configure
+# make
+# make install
+
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
