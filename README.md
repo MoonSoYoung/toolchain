@@ -17,14 +17,6 @@
 
 자바, C/C++과 같은 프로그램을 소스 네비게이터를 통해 구문 분석을 하고, 그 결과로 나온 SNDB 파일을 SQLite 데이터베이스에 저장하고 필요한 정보를 추출하여 Dot 스크립트를 통해 그래프로 소프트웨어 가시화를 한다. 
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
 ### Installing
 
 SWV에서 전체 필요한 프로그램을 설치했는데, 혹시라도 누락된 경우가 있다면 아래와 같이 설치를 하면 된다. 리눅스에 SQLite는 기본으로 설치되어 있으므로 따로 설치방법을 설명하지 않고, Source Navigator, Graphviz만 설명한다. SWV에서 디렉토리 구성을 모두 했으므로 아래와 같이 따라 한다.
@@ -61,10 +53,10 @@ SWV에서 전체 필요한 프로그램을 설치했는데, 혹시라도 누락�
 ```
 
 * toolchain 소스코드를 github에서 저장소를 복제한다.
-복제 위치: /usr/local/SWV/toolchain
+복제 위치: /usr/local/SWV/toolchain 이므로 아래와 같이 작성한다. 복제가 끝난 후, 확인하면 본 toolchain 소스코드가 저장된 것을 확인할 수 있다.
 
 ```bash
-# git clone https://github.com/moasoftware/toolchain.git
+# git clone https://github.com/moasoftware/toolchain.git /usr/local/SWV/toolchain
 ```
 
 ## Running the tests
