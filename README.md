@@ -97,9 +97,29 @@ filelist.dat 파일이 있다면 삭제를 하고, **/usr/local/SWV/dev/src** �
 # echo /usr/local/SWV/dev/src > /usr/local/SWV/dev/filelist.dat
 ```
 
-3. ExtractInfo
+3. Source Navigator 실행
 
-3.1 ExtractInfo Compile
+```bash
+# /usr/local/SWV/dev/SNavi/bin/snavigator --batchmode --import /usr/local/SWV/dev/filelist.dat
+
+Scanning Project...
+Scanning: /usr/local/SWV/dev/src/Bitbase.java
+Scanning: /usr/local/SWV/dev/src/Board.java
+Scanning: /usr/local/SWV/dev/src/Engine.java
+Scanning: /usr/local/SWV/dev/src/Evaluation2.java
+Scanning: /usr/local/SWV/dev/src/Global.java
+Scanning: /usr/local/SWV/dev/src/HistoryWriter.java
+Scanning: /usr/local/SWV/dev/src/Main.java
+Scanning: /usr/local/SWV/dev/src/MoveFunctions.java
+Scanning: /usr/local/SWV/dev/src/SEE.java
+Scanning: /usr/local/SWV/dev/src/TransTable.java
+Waiting for cross-referencing to complete
+Project has been built
+```
+
+4. ExtractInfo
+
+4.1 ExtractInfo Compile
 
 Source Nagigator 가 소스코드를 분석하여 dbdump를 생성하고, 그 내용을 SQLite에 저장한다.
 
@@ -107,64 +127,26 @@ Source Nagigator 가 소스코드를 분석하여 dbdump를 생성하고, 그 �
 # javac -cp "/usr/local/SWV/toolchain/ExtractInfo/lib/sqlite-jdbc-3.8.11.2.jar" -sourcepath src -d /usr/local/SWV/toolchain/ExtractInfo/bin/ /usr/local/SWV/toolchain/ExtractInfo/src/open/swv/main/ExtractInfo.java
 ```
 
-3.2 ExtractInfo.jar 생성
+4.2 ExtractInfo.jar 생성
 ```bash
 추가
 ```
 
-3.3 ExtractInfo 실행
+4.3 ExtractInfo 실행
 
 **ExtractInfo.jar**는 **/usr/local/SWV/toolchain**에 있다.
 
 ```bash
 java -jar /usr/local/SWV/toolchain/ExtractInfo.jar -input /usr/local/SWV/dev/all_java_uci_ce/uci/MagnumChess_v4.00/src/magnumchess -output /usr/local/SWV/dev/src
 ```
-### Break down into end to end tests
 
-Explain what these tests test and why
+5. Diagram 
 
-```
-Give an example
-```
+5.1 Diagram Compile
 
-### And coding style tests
+5.2 Digram.jar 생성
 
-Explain what these tests test and why
+5.3 Diagram 실행
 
-```
-Give an example
-```
 
-## Deployment
 
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
