@@ -94,9 +94,26 @@ filelist.dat 파일이 있다면 삭제를 하고, **/usr/local/SWV/dev/src** �
 
 ```bash
 # rm -rf /usr/local/SWV/dev/filelist.dat
-# echo /usr/local/SWV/dev/src > /usr/local/SWV/dev/filelist.dat
+# echo /usr/local/SWV/dev/src/* > /usr/local/SWV/dev/filelist.dat
+# cat /usr/local/SWV/dev/filelist.dat
+/usr/local/SWV/dev/src/Bitbase.java 
+/usr/local/SWV/dev/src/Board.java 
+/usr/local/SWV/dev/src/Engine.java 
+/usr/local/SWV/dev/src/Evaluation2.java 
+/usr/local/SWV/dev/src/Global.java 
+/usr/local/SWV/dev/src/HistoryWriter.java 
+/usr/local/SWV/dev/src/Main.java
+/usr/local/SWV/dev/src/MoveFunctions.java 
+/usr/local/SWV/dev/src/SEE.java 
+/usr/local/SWV/dev/src/TransTable.java
 ```
+ 
+filelist.dat 파일이 올바르게 만들어졌는지 확인한다.
+소스코드의 경로가 줄 단위로 있어야 한다. 만약 줄 단위가 아니라면 직접 수정을 하도록 하자.
 
+```bash
+# vim 
+```
 3. Source Navigator 실행
 
 ```bash
