@@ -61,7 +61,7 @@ SWV에서 전체 필요한 프로그램을 설치했는데, 혹시라도 누락�
 
 ## Running the tests
 
-* AnnotationTerminator Compile and Jar
+###* AnnotationTerminator Compile
 
 Source Nagigator 가 Annotaion 기능에 대해 구문분석을 못하므로  소스코드에서 Annotation을 삭제하는 작업이 필요하다.
 **"/usr/local/SWV/toolchain/AnnotationTerminator/lib/javaparser-core-3.1.1.jar"** 라이브러리를 포함하여 
@@ -72,6 +72,20 @@ Source Nagigator 가 Annotaion 기능에 대해 구문분석을 못하므로  �
 
 ```
 
+* AnnotationTerminator.jar 생성
+```bash
+추가
+```
+
+* AnnotationTerminator 실행
+
+**AnnotationTerminator.jar**는 **/usr/local/SWV/toolchain**에 있다.
+분석할 소스코드는 자바로 만든 Chess 프로그램이고, 소스코드는 **/usr/local/SWV/dev/** 하위에 존재한다.
+분석할 소스코드가 있는지 꼭 확인하고 아래처럼 실행한다. 절대경로로 실행하는 것은 어느 위치에 있든지 헷갈리지 않고 프로그램을 실행하려는데 목적이 있다.
+
+```bash
+java -jar /usr/local/SWV/toolchain/AnnotationTerminator.jar -input /usr/local/SWV/dev/all_java_uci_ce/uci/MagnumChess_v4.00/src/magnumchess -output /usr/local/SWV/dev/src
+```
 ### Break down into end to end tests
 
 Explain what these tests test and why
