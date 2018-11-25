@@ -148,10 +148,65 @@ Source Nagigator 가 소스코드를 분석하여 dbdump를 생성하고, 그 �
 
 4.3 ExtractInfo 실행
 
-**ExtractInfo.jar**는 **/usr/local/SWV/toolchain**에 있다.
+**ExtractInfo.jar**는 **/usr/local/SWV/toolchain**에 있다. 여기에서 꼭 해야할 일이 있는데, Source Navigator 의 ```dbdump``` 명령어를 사용하려면, 링크를 먼저 해줘야 한다.
 
 ```bash
-java -jar /usr/local/SWV/toolchain/ExtractInfo.jar -input /usr/local/SWV/dev/all_java_uci_ce/uci/MagnumChess_v4.00/src/magnumchess -output /usr/local/SWV/dev/src
+# ln /usr/local/SWV/dev/SNavi/sourcenavigator-NG4.5/snavigator/db/dbdump /usr/local/SWV/dev/SNavi/bin/dbdump
+```
+
+```bash
+# java -jar /usr/local/SWV/toolchain/ExtractInfo.jar -sndb "/usr/local/SWV/dev/SNavi/bin/SNDB4" -sndump "/usr/local/SWV/dev/SNavi/bin/dbdump"
+db name is default : recoveryDB.db
+init db: true
+/usr/local/SWV/dev/SNavi/bin/dbdump /usr/local/SWV/dev/SNavi/bin/SNDB4/tmp_n7tdf0
+/usr/local/SWV/dev/SNavi/bin/dbdump /usr/local/SWV/dev/SNavi/bin/SNDB4/tmp_CXE6CQ
+/usr/local/SWV/dev/SNavi/bin/dbdump /usr/local/SWV/dev/SNavi/bin/SNDB4/bin.icl
+Insert DB : icl file
+
+Complete : icl file
+/usr/local/SWV/dev/SNavi/bin/dbdump /usr/local/SWV/dev/SNavi/bin/SNDB4/bin.f
+Insert DB : f file
+
+Complete : f file
+/usr/local/SWV/dev/SNavi/bin/dbdump /usr/local/SWV/dev/SNavi/bin/SNDB4/bin.iu
+Insert DB : iu file
+
+Complete : iu file
+/usr/local/SWV/dev/SNavi/bin/dbdump /usr/local/SWV/dev/SNavi/bin/SNDB4/bin.fil
+Insert DB : fil file
+
+Complete : fil file
+/usr/local/SWV/dev/SNavi/bin/dbdump /usr/local/SWV/dev/SNavi/bin/SNDB4/bin.iv
+Insert DB : iv file
+
+Complete : iv file
+/usr/local/SWV/dev/SNavi/bin/dbdump /usr/local/SWV/dev/SNavi/bin/SNDB4/bin.mi
+Insert DB : mi file
+
+Complete : mi file
+/usr/local/SWV/dev/SNavi/bin/dbdump /usr/local/SWV/dev/SNavi/bin/SNDB4/bin.md
+Insert DB : md file
+
+Complete : md file
+/usr/local/SWV/dev/SNavi/bin/dbdump /usr/local/SWV/dev/SNavi/bin/SNDB4/bin.lv
+Insert DB : lv file
+
+Complete : lv file
+/usr/local/SWV/dev/SNavi/bin/dbdump /usr/local/SWV/dev/SNavi/bin/SNDB4/bin.cl
+Insert DB : cl file
+
+Complete : cl file
+/usr/local/SWV/dev/SNavi/bin/dbdump /usr/local/SWV/dev/SNavi/bin/SNDB4/bin.to
+Insert DB : to file
+..
+Complete : to file
+/usr/local/SWV/dev/SNavi/bin/dbdump /usr/local/SWV/dev/SNavi/bin/SNDB4/bin.by
+Insert DB : by file
+..
+Complete : by file
+/usr/local/SWV/dev/SNavi/bin/dbdump /usr/local/SWV/dev/SNavi/bin/SNDB4/bin.1
+init db: true
+
 ```
 
 5. Diagram 
