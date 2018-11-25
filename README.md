@@ -209,6 +209,9 @@ init db: true
 
 ```
 
+실행 후, 만들어지는 ```recoveryDB.db``` 파일은 위에 jar를 실행한 위치에 생성이 되므로 꼭 주의해서 ```/usr/local/SWV/dev``` 디렉토리 위치에서 실행해야 한다. 다른 곳에 생성되면 본인이 찾으러 다녀야하는 번거로움이 발생!!!
+
+
 5. Diagram 
 
 5.1 Diagram Compile
@@ -225,11 +228,49 @@ init db: true
 
 5.3 Diagram 실행
 
-4번 ExtractInfo를 실행하고 만들어지는 ```recoveryDB.db``` 파일이 ```/usr/local/SWV/dev```에 생성되는데, 이 파일 크기가 0이라면 제대로 생성된 것이 아니므로 꼭 확인을 해본 후에 아래 **Diagram.jar** 실행을 하길 권한다. 그리고 ```dot```명령어가 작성자의 리눅스에는 ```/usr/local/SWV/dev/graphviz/graphviz-2.40.1/cmd/dot```위치에 있어서 아래와 같이 작성하여 실행하였다.
+4번 ExtractInfo를 실행하고 만들어지는 ```recoveryDB.db``` 파일이 ```/usr/local/SWV/dev```에 생성되는데, 이 파일 크기가 0이라면 제대로 생성된 것이 아니므로 꼭 확인을 해본 후에 아래 **Diagram.jar** 실행을 하길 권한다. 그리고 ```dot```명령어가 작성자의 리눅스에는 ```/usr/local/bin/dot```위치에 있어서 아래와 같이 작성하여 실행하였다.
 
 ```bash
-# java -jar /usr/local/SWV/toolchain/Diagram.jar /usr/local/SWV/dev /usr/local/SWV/dev/graphviz/graphviz-2.40.1/cmd/dot
+# java -jar /usr/local/SWV/toolchain/Diagram.jar /usr/local/SWV/dev /usr/local/bin/dot
+....
+....
+...
+	"Evaluation2"->"Bitbase" [style=dotted, arrowhead=vee];
+	"Evaluation2"->"TransTable" [style=dotted, arrowhead=vee];
+	"Main"->"Board" [style=dotted, arrowhead=vee];
+	"Main"->"String" [style=dotted, arrowhead=vee];
+	"SEE"->"Board" [style=dotted, arrowhead=vee];
+	"SEE"->"Global" [style=dotted, arrowhead=vee];
+	"String"->"Global" [style=dotted, arrowhead=vee];
+}
+dotting
+/usr/local/SWV/dev/ClassDiagram.png
+done
+digraph xx {
+	node[shape=record, style=filled, fillcolor=lightyellow];
+"Bitbase""Board""Evaluation2""Global""Main""SEE""String""TransTable"		"#"->"Global" [style=solid, arrowhead=vee, label="218"];
+		"#"->"Board" [style=solid, arrowhead=vee, label="5"];
+		"#"->"Evaluation2" [style=solid, arrowhead=vee, label="159"];
+		"#"->"String" [style=solid, arrowhead=vee, label="0"];
+		"#"->"SEE" [style=solid, arrowhead=vee, label="5"];
+		"Board"->"Global" [style=solid, arrowhead=vee, label="24"];
+		"Board"->"Bitbase" [style=solid, arrowhead=vee, label="1"];
+		"Evaluation2"->"Board" [style=solid, arrowhead=vee, label="57"];
+		"Evaluation2"->"Global" [style=solid, arrowhead=vee, label="182"];
+		"Evaluation2"->"Bitbase" [style=solid, arrowhead=vee, label="0"];
+		"Evaluation2"->"TransTable" [style=solid, arrowhead=vee, label="5"];
+		"Main"->"Board" [style=solid, arrowhead=vee, label="0"];
+		"Main"->"String" [style=solid, arrowhead=vee, label="0"];
+		"SEE"->"Board" [style=solid, arrowhead=vee, label="63"];
+		"SEE"->"Global" [style=solid, arrowhead=vee, label="56"];
+		"String"->"Global" [style=solid, arrowhead=vee, label="4"];
+}
+dotting
+/usr/local/SWV/dev/CouplingDiagram.png
+done
 ```
+
+```/usr/local/SWV/dev/ClassDiagram.png''', '''/usr/local/SWV/dev/CouplingDiagram.png''' 파일을 실행하면 툴체인을 통해 생성된 소스코드 가시화 내용을 확인할 수 있다.
 
 
 
