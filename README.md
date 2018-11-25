@@ -213,9 +213,23 @@ init db: true
 
 5.1 Diagram Compile
 
+```bash
+# javac -cp "/usr/local/SWV/toolchain/Diagram/lib/sqlite-jdbc-3.8.11.2.jar" -sourcepath src -d /usr/local/SWV/toolchain/Diagram/bin/ /usr/local/SWV/toolchain/Diagram/src/open/swv/diagram/*.java
+```
+
 5.2 Digram.jar 생성
 
+```bash
+추가
+```
+
 5.3 Diagram 실행
+
+4번 ExtractInfo를 실행하고 만들어지는 ```recoveryDB.db``` 파일이 ```/usr/local/SWV/dev```에 생성되는데, 이 파일 크기가 0이라면 제대로 생성된 것이 아니므로 꼭 확인을 해본 후에 아래 **Diagram.jar** 실행을 하길 권한다. 그리고 ```dot```명령어가 작성자의 리눅스에는 ```/usr/local/SWV/dev/graphviz/graphviz-2.40.1/cmd/dot```위치에 있어서 아래와 같이 작성하여 실행하였다.
+
+```bash
+# java -jar /usr/local/SWV/toolchain/Diagram.jar /usr/local/SWV/dev /usr/local/SWV/dev/graphviz/graphviz-2.40.1/cmd/dot
+```
 
 
 
