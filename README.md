@@ -272,5 +272,5 @@ done
 
 ```/usr/local/SWV/dev/ClassDiagram.png''', '''/usr/local/SWV/dev/CouplingDiagram.png''' 파일을 실행하면 툴체인을 통해 생성된 소스코드 가시화 내용을 확인할 수 있다.
 
-
+![Coupling](./CouplingDiagram.png)
 
