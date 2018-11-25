@@ -61,7 +61,7 @@ SWV에서 전체 필요한 프로그램을 설치했는데, 혹시라도 누락�
 
 ## Running the tests
 
-###* AnnotationTerminator Compile
+### * AnnotationTerminator Compile
 
 Source Nagigator 가 Annotaion 기능에 대해 구문분석을 못하므로  소스코드에서 Annotation을 삭제하는 작업이 필요하다.
 **"/usr/local/SWV/toolchain/AnnotationTerminator/lib/javaparser-core-3.1.1.jar"** 라이브러리를 포함하여 
