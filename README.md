@@ -63,7 +63,7 @@ SWV에서 전체 필요한 프로그램을 설치했는데, 혹시라도 누락�
 
 1. AnnotationTerminator
 
-  - AnnotationTerminator Compile
+     - AnnotationTerminator Compile
 
 Source Nagigator 가 Annotaion 기능에 대해 구문분석을 못하므로  소스코드에서 Annotation을 삭제하는 작업이 필요하다.
 **"/usr/local/SWV/toolchain/AnnotationTerminator/lib/javaparser-core-3.1.1.jar"** 라이브러리를 포함하여 
@@ -74,12 +74,12 @@ Source Nagigator 가 Annotaion 기능에 대해 구문분석을 못하므로  �
 
 ```
 
-* AnnotationTerminator.jar 생성
+     - AnnotationTerminator.jar 생성
 ```bash
 추가
 ```
 
-* AnnotationTerminator 실행
+     - AnnotationTerminator 실행
 
 **AnnotationTerminator.jar**는 **/usr/local/SWV/toolchain**에 있다.
 분석할 소스코드는 자바로 만든 Chess 프로그램이고, 소스코드는 **/usr/local/SWV/dev/** 하위에 존재한다.
